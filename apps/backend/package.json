@@ -1,0 +1,50 @@
+{
+  "name": "gaming-platform-backend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "nest start --watch",
+    "build": "nest build",
+    "start": "node dist/main",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\"",
+    "clean": "rm -rf dist node_modules .turbo"
+  },
+  "dependencies": {
+    "@nestjs/core": "10.3.0",
+    "@nestjs/common": "10.3.0",
+    "@nestjs/platform-express": "10.3.0",
+    "@nestjs/platform-ws": "10.3.0",
+    "@nestjs/websockets": "10.3.0",
+    "@nestjs/config": "10.3.0",
+    "@colyseus/core": "0.15.0",
+    "@colyseus/ws-transport": "0.15.0",
+    "@colyseus/monitor": "0.15.0",
+    "socket.io": "4.6.0",
+    "mediasoup": "3.13.0",
+    "@nestjs/mongoose": "10.0.0",
+    "mongoose": "8.1.0",
+    "@typegoose/typegoose": "12.0.0",
+    "@chainlink/external-adapter": "2.0.0",
+    "@api3/airnode-node": "0.11.0",
+    "mongodb": "6.3.0",
+    "dynamoose": "3.2.0",
+    "@aws-sdk/client-dynamodb": "3.500.0",
+    "@aws-sdk/client-s3": "3.500.0",
+    "@aws-sdk/client-lambda": "3.500.0",
+    "@upstash/redis": "1.28.0",
+    "@upstash/ratelimit": "1.0.0",
+    "@vercel/kv": "1.0.0",
+    "dragonfly-client": "1.0.0",
+    "rxjs": "7.8.1",
+    "reflect-metadata": "0.1.14"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "10.3.0",
+    "@nestjs/schematics": "10.1.0",
+    "@types/node": "20.11.0",
+    "@typescript-eslint/eslint-plugin": "6.19.1",
+    "@typescript-eslint/parser": "6.19.1",
+    "eslint": "8.56.0",
+    "typescript": "5.4.0"
+  }
+}
