@@ -21,6 +21,19 @@ export const useWalletStore = create<WalletStore>((set, get) => ({
   error: null,
 
   connect: async (chainId: ChainId) => {
+    const state = get();
+
+    // Prevent multiple connection attempts
+    if (state.isConnecting) {
+      throw new Error('Connection already in progress');
+    }
+
+    // Check if already connected to this chain
+    if (state.connections[chainId]?.isConnected) {
+      console.warn(`Already connected to ${chainId}`);
+      return;
+    }
+
     set({ isConnecting: true, error: null });
 
     try {

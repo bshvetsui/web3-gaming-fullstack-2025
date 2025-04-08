@@ -37,6 +37,16 @@ export class GameRoom extends Room<GameState> {
   onJoin(client: Client, options: JoinOptions) {
     console.log(`Player ${client.sessionId} joined`);
 
+    // Validate join options
+    if (!options.username || !options.walletAddress) {
+      throw new Error('Username and wallet address are required');
+    }
+
+    // Check if room is full
+    if (this.clients.length >= this.maxClients) {
+      throw new Error('Room is full');
+    }
+
     // Add player to game state
     const player = this.state.addPlayer(
       client.sessionId,
