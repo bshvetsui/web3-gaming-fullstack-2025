@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { GameModule } from './game/game.module';
 import { NFTModule } from './nft/nft.module';
 import { TournamentModule } from './tournament/tournament.module';
+import { AchievementsModule } from './achievements/achievements.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { TournamentModule } from './tournament/tournament.module';
     GameModule,
     NFTModule,
     TournamentModule,
+    AchievementsModule,
   ],
   controllers: [],
   providers: [],
