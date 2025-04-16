@@ -8,6 +8,7 @@ import { InventoryModule } from './inventory/inventory.module';
 import { QuestsModule } from './quests/quests.module';
 import { OracleModule } from './oracle/oracle.module';
 import { ReferralModule } from './referral/referral.module';
+import { GuildsModule } from './guilds/guilds.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { ReferralModule } from './referral/referral.module';
     QuestsModule,
     OracleModule,
     ReferralModule,
+    GuildsModule,
   ],
   controllers: [],
   providers: [],
