@@ -5,6 +5,7 @@ import { NFTModule } from './nft/nft.module';
 import { TournamentModule } from './tournament/tournament.module';
 import { AchievementsModule } from './achievements/achievements.module';
 import { InventoryModule } from './inventory/inventory.module';
+import { QuestsModule } from './quests/quests.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { InventoryModule } from './inventory/inventory.module';
     TournamentModule,
     AchievementsModule,
     InventoryModule,
+    QuestsModule,
   ],
   controllers: [],
   providers: [],
