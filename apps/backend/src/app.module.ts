@@ -9,6 +9,7 @@ import { QuestsModule } from './quests/quests.module';
 import { OracleModule } from './oracle/oracle.module';
 import { ReferralModule } from './referral/referral.module';
 import { GuildsModule } from './guilds/guilds.module';
+import { BattlePassModule } from './battlepass/battlepass.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { GuildsModule } from './guilds/guilds.module';
     OracleModule,
     ReferralModule,
     GuildsModule,
+    BattlePassModule,
   ],
   controllers: [],
   providers: [],
