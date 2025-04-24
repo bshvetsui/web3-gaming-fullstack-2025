@@ -10,6 +10,7 @@ import { OracleModule } from './oracle/oracle.module';
 import { ReferralModule } from './referral/referral.module';
 import { GuildsModule } from './guilds/guilds.module';
 import { BattlePassModule } from './battlepass/battlepass.module';
+import { SocialModule } from './social/social.module';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import { BattlePassModule } from './battlepass/battlepass.module';
     ReferralModule,
     GuildsModule,
     BattlePassModule,
+    SocialModule,
   ],
   controllers: [],
   providers: [],
