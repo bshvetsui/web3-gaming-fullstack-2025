@@ -11,6 +11,7 @@ import { ReferralModule } from './referral/referral.module';
 import { GuildsModule } from './guilds/guilds.module';
 import { BattlePassModule } from './battlepass/battlepass.module';
 import { SocialModule } from './social/social.module';
+import { ShopModule } from './shop/shop.module';
 
 @Module({
   imports: [
@@ -28,6 +29,7 @@ import { SocialModule } from './social/social.module';
     GuildsModule,
     BattlePassModule,
     SocialModule,
+    ShopModule,
   ],
   controllers: [],
   providers: [],
