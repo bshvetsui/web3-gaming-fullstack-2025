@@ -12,6 +12,7 @@ import { GuildsModule } from './guilds/guilds.module';
 import { BattlePassModule } from './battlepass/battlepass.module';
 import { SocialModule } from './social/social.module';
 import { ShopModule } from './shop/shop.module';
+import { LeaderboardModule } from './leaderboard/leaderboard.module';
 
 @Module({
   imports: [
@@ -30,6 +31,7 @@ import { ShopModule } from './shop/shop.module';
     BattlePassModule,
     SocialModule,
     ShopModule,
+    LeaderboardModule,
   ],
   controllers: [],
   providers: [],
