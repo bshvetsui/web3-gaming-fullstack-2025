@@ -1,0 +1,353 @@
+.container {
+  background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%);
+  border-radius: 12px;
+  padding: 24px;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.guildInfo {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.guildIcon {
+  font-size: 64px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.guildDetails h2 {
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.tag {
+  color: #ffd700;
+  font-size: 24px;
+}
+
+.description {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+.stats {
+  display: flex;
+  gap: 24px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 4px;
+}
+
+.value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #4facfe;
+}
+
+.levelProgress {
+  margin-bottom: 24px;
+}
+
+.progressBar {
+  height: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #ffd700, #ff8c00);
+  transition: width 0.3s ease;
+}
+
+.progressText {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.tab {
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid transparent;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.tab.active {
+  background: rgba(79, 172, 254, 0.2);
+  border-color: #4facfe;
+  color: #fff;
+}
+
+.content {
+  min-height: 400px;
+}
+
+.membersTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.membersTable th {
+  text-align: left;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.membersTable td {
+  padding: 16px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.playerCell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.playerName {
+  font-weight: 600;
+}
+
+.role {
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.role.leader {
+  background: linear-gradient(135deg, #ffd700, #ff8c00);
+  color: #1a1a2e;
+}
+
+.role.officer {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #1a1a2e;
+}
+
+.role.member {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.actionBtn {
+  padding: 6px 12px;
+  margin-right: 4px;
+  background: rgba(79, 172, 254, 0.2);
+  border: 1px solid #4facfe;
+  border-radius: 6px;
+  color: #4facfe;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.actionBtn:hover {
+  background: #4facfe;
+  color: #fff;
+}
+
+.actionBtn.danger {
+  background: rgba(255, 107, 107, 0.2);
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+}
+
+.actionBtn.danger:hover {
+  background: #ff6b6b;
+  color: #fff;
+}
+
+.treasuryTab {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.treasuryInfo {
+  text-align: center;
+  padding: 24px;
+  background: rgba(255, 215, 0, 0.1);
+  border-radius: 8px;
+}
+
+.treasuryInfo h3 {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+}
+
+.balance {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffd700;
+  margin: 0;
+}
+
+.contributeSection {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.contributeSection h4 {
+  margin: 0 0 16px 0;
+}
+
+.contributeForm {
+  display: flex;
+  gap: 12px;
+}
+
+.input {
+  flex: 1;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #4facfe;
+}
+
+.contributeBtn {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #ffd700, #ff8c00);
+  border: none;
+  border-radius: 8px;
+  color: #1a1a2e;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.contributeBtn:hover {
+  transform: scale(1.05);
+}
+
+.expenses h4 {
+  margin: 0 0 16px 0;
+}
+
+.expensesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.expensesList li {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.settingsTab {
+  max-width: 600px;
+}
+
+.settingsTab h3 {
+  margin: 0 0 24px 0;
+}
+
+.settingGroup {
+  margin-bottom: 20px;
+}
+
+.settingGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.textarea {
+  width: 100%;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: #4facfe;
+}
+
+.saveBtn {
+  padding: 12px 32px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  border: none;
+  border-radius: 8px;
+  color: #1a1a2e;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.saveBtn:hover {
+  transform: scale(1.05);
+}
+
+.loading,
+.noGuild {
+  text-align: center;
+  padding: 48px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+}
