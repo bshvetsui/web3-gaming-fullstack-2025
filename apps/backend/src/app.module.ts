@@ -13,6 +13,7 @@ import { BattlePassModule } from './battlepass/battlepass.module';
 import { SocialModule } from './social/social.module';
 import { ShopModule } from './shop/shop.module';
 import { LeaderboardModule } from './leaderboard/leaderboard.module';
+import { StatsModule } from './stats/stats.module';
 
 @Module({
   imports: [
@@ -32,6 +33,7 @@ import { LeaderboardModule } from './leaderboard/leaderboard.module';
     SocialModule,
     ShopModule,
     LeaderboardModule,
+    StatsModule,
   ],
   controllers: [],
   providers: [],
