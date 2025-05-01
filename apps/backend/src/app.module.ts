@@ -6,6 +6,7 @@ import { TournamentModule } from './tournament/tournament.module';
 import { AchievementsModule } from './achievements/achievements.module';
 import { InventoryModule } from './inventory/inventory.module';
 import { QuestsModule } from './quests/quests.module';
+import { OracleModule } from './oracle/oracle.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { QuestsModule } from './quests/quests.module';
     AchievementsModule,
     InventoryModule,
     QuestsModule,
+    OracleModule,
   ],
   controllers: [],
   providers: [],
