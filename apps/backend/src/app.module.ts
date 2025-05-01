@@ -14,6 +14,7 @@ import { SocialModule } from './social/social.module';
 import { ShopModule } from './shop/shop.module';
 import { LeaderboardModule } from './leaderboard/leaderboard.module';
 import { StatsModule } from './stats/stats.module';
+import { NotificationsModule } from './notifications/notifications.module';
 
 @Module({
   imports: [
@@ -34,6 +35,7 @@ import { StatsModule } from './stats/stats.module';
     ShopModule,
     LeaderboardModule,
     StatsModule,
+    NotificationsModule,
   ],
   controllers: [],
   providers: [],
