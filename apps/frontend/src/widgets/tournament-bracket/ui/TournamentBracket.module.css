@@ -1,0 +1,166 @@
+.container {
+  background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%);
+  border-radius: 16px;
+  padding: 32px;
+  color: #fff;
+  overflow-x: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffd700, #ff8c00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.status {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.statusBadge {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.statusBadge.upcoming {
+  background: rgba(79, 172, 254, 0.2);
+  color: #4facfe;
+}
+
+.statusBadge.in_progress {
+  background: rgba(255, 215, 0, 0.2);
+  color: #ffd700;
+}
+
+.statusBadge.completed {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+}
+
+.players {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.bracket {
+  display: flex;
+  gap: 48px;
+  min-width: min-content;
+}
+
+.round {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 300px;
+}
+
+.roundTitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  color: #4facfe;
+}
+
+.matches {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+  justify-content: space-around;
+}
+
+.matchCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.matchCard:hover {
+  border-color: #4facfe;
+  box-shadow: 0 4px 16px rgba(79, 172, 254, 0.2);
+}
+
+.player {
+  padding: 16px 20px;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.player:first-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.player.winner {
+  background: rgba(76, 175, 80, 0.15);
+  border-left: 4px solid #4caf50;
+}
+
+.player.loser {
+  opacity: 0.5;
+}
+
+.playerName {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.vs {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.3);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 48px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bracket {
+    gap: 24px;
+  }
+
+  .round {
+    min-width: 250px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+}
