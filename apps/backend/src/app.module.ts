@@ -7,6 +7,7 @@ import { AchievementsModule } from './achievements/achievements.module';
 import { InventoryModule } from './inventory/inventory.module';
 import { QuestsModule } from './quests/quests.module';
 import { OracleModule } from './oracle/oracle.module';
+import { ReferralModule } from './referral/referral.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { OracleModule } from './oracle/oracle.module';
     InventoryModule,
     QuestsModule,
     OracleModule,
+    ReferralModule,
   ],
   controllers: [],
   providers: [],
