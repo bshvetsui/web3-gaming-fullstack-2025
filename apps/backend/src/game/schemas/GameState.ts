@@ -11,6 +11,8 @@ export class PlayerState extends Schema {
   @type('number') y: number = 0;
   @type('number') z: number = 0;
   @type('number') rotation: number = 0;
+  @type('number') velocityX: number = 0;
+  @type('number') velocityZ: number = 0;
   @type('number') health: number = 100;
   @type('number') score: number = 0;
   @type('boolean') isAlive: boolean = true;
