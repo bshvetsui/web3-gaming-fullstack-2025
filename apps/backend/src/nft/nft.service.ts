@@ -18,6 +18,24 @@ export class NFTService {
   private listings: Map<string, NFTListing> = new Map();
   private metadataCache: Map<string, { data: any; timestamp: number }> = new Map();
   private readonly CACHE_TTL = 300000; // 5 minutes
+  private cleanupInterval: NodeJS.Timeout;
+
+  constructor() {
+    // Cleanup expired cache entries every hour
+    this.cleanupInterval = setInterval(() => this.cleanupCache(), 3600000);
+  }
+
+  /**
+   * Cleanup expired cache entries
+   */
+  private cleanupCache(): void {
+    const now = Date.now();
+    for (const [key, value] of this.metadataCache.entries()) {
+      if (now - value.timestamp > this.CACHE_TTL) {
+        this.metadataCache.delete(key);
+      }
+    }
+  }
 
   /**
    * Get user's NFTs from blockchain
