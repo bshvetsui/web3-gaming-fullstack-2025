@@ -1,0 +1,94 @@
+.lobby {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.playerInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+.label {
+  color: #a0a0b0;
+  font-size: 14px;
+}
+
+.address {
+  color: #667eea;
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 14px;
+}
+
+.modes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.modeCard {
+  background: rgba(26, 26, 46, 0.9);
+  border: 2px solid rgba(102, 126, 234, 0.3);
+  border-radius: 12px;
+  padding: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modeCard:hover {
+  border-color: rgba(102, 126, 234, 0.6);
+  transform: translateY(-4px);
+}
+
+.modeCard.active {
+  border-color: #667eea;
+  background: rgba(102, 126, 234, 0.15);
+}
+
+.modeName {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 12px 0;
+}
+
+.modeDescription {
+  color: #a0a0b0;
+  font-size: 14px;
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+}
+
+.modeInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #667eea;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}
