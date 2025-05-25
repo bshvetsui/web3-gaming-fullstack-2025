@@ -1,0 +1,144 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 100%);
+  padding: 40px 20px;
+  color: #fff;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+.header p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.categoryBtn {
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.categoryBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.categoryBtn.active {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  border-color: transparent;
+  color: #000;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.content h2 {
+  text-align: center;
+  font-size: 28px;
+  margin: 0 0 32px 0;
+  color: #ffd700;
+}
+
+.table {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 100px 1fr 150px;
+  padding: 20px 24px;
+  background: rgba(255, 255, 255, 0.1);
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 100px 1fr 150px;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background 0.2s;
+}
+
+.row:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.row.topThree {
+  background: rgba(255, 215, 0, 0.05);
+}
+
+.rank {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.medal {
+  font-size: 32px;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.playerName {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.level {
+  padding: 4px 8px;
+  background: rgba(79, 172, 254, 0.2);
+  border-radius: 4px;
+  font-size: 12px;
+  color: #4facfe;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: 700;
+  font-size: 20px;
+  color: #4facfe;
+}
+
+.loading {
+  text-align: center;
+  padding: 80px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+}
