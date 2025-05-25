@@ -16,6 +16,7 @@ export const createPhaserConfig = (parent: string): Phaser.Types.Core.GameConfig
       arcade: {
         gravity: { x: 0, y: 0 },
         debug: process.env.NODE_ENV === 'development',
+        fps: 60,
       },
     },
     scale: {
@@ -25,6 +26,12 @@ export const createPhaserConfig = (parent: string): Phaser.Types.Core.GameConfig
     render: {
       pixelArt: false,
       antialias: true,
+      roundPixels: true,
+      powerPreference: 'high-performance',
+    },
+    fps: {
+      target: 60,
+      forceSetTimeOut: false,
     },
   };
 };
