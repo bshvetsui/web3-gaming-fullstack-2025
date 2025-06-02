@@ -11,10 +11,20 @@
       "persistent": true
     },
     "lint": {
-      "outputs": []
+      "outputs": [],
+      "cache": true
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "outputs": ["coverage/**"],
+      "cache": true
     },
     "clean": {
       "cache": false
+    },
+    "type-check": {
+      "outputs": [],
+      "cache": true
     }
   }
 }
