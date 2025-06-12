@@ -16,6 +16,8 @@ export interface NFTListing {
 @Injectable()
 export class NFTService {
   private listings: Map<string, NFTListing> = new Map();
+  private metadataCache: Map<string, { data: any; timestamp: number }> = new Map();
+  private readonly CACHE_TTL = 300000; // 5 minutes
 
   /**
    * Get user's NFTs from blockchain
@@ -143,17 +145,24 @@ export class NFTService {
   }
 
   /**
-   * Get NFT metadata from blockchain
+   * Get NFT metadata from blockchain with caching
    */
   async getNFTMetadata(
     chainId: string,
     contractAddress: string,
     tokenId: string
   ) {
+    const cacheKey = `${chainId}:${contractAddress}:${tokenId}`;
+
+    // Check cache first
+    const cached = this.metadataCache.get(cacheKey);
+    if (cached && Date.now() - cached.timestamp < this.CACHE_TTL) {
+      return cached.data;
+    }
+
     // In production, fetch from blockchain or IPFS
     // Return mock data for now
-
-    return {
+    const metadata = {
       id: `${chainId}-${tokenId}`,
       tokenId,
       contractAddress,
@@ -164,5 +173,25 @@ export class NFTService {
       attributes: {},
       owner: '0x0000000000000000000000000000000000000000',
     };
+
+    // Cache the result
+    this.metadataCache.set(cacheKey, {
+      data: metadata,
+      timestamp: Date.now(),
+    });
+
+    return metadata;
+  }
+
+  /**
+   * Clear expired cache entries
+   */
+  clearExpiredCache() {
+    const now = Date.now();
+    this.metadataCache.forEach((value, key) => {
+      if (now - value.timestamp > this.CACHE_TTL) {
+        this.metadataCache.delete(key);
+      }
+    });
   }
 }
