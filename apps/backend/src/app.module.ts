@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { GameModule } from './game/game.module';
+import { NFTModule } from './nft/nft.module';
 
 @Module({
   imports: [
@@ -8,6 +9,7 @@ import { GameModule } from './game/game.module';
       isGlobal: true,
     }),
     GameModule,
+    NFTModule,
   ],
   controllers: [],
   providers: [],
