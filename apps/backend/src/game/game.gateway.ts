@@ -25,7 +25,7 @@ export class GameGateway
 
   private connectedUsers = new Map<string, any>();
 
-  afterInit(server: Server) {
+  afterInit() {
     console.log('WebSocket Gateway initialized');
   }
 

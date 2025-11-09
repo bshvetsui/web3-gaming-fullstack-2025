@@ -10,17 +10,12 @@
     "clean": "rm -rf .next .turbo node_modules"
   },
   "dependencies": {
-    "next": "14.3.0",
+    "next": "14.2.5",
     "react": "18.3.0",
     "react-dom": "18.3.0",
-    "typescript": "5.4.0",
-    "@immutable/sdk": "1.0.0",
-    "@immutable/passport": "1.0.0",
-    "@immutable/x-client": "1.0.0",
-    "@ronin/wallets": "2.0.0",
-    "@axieinfinity/ronin-provider": "2.0.0",
-    "gala-sdk": "2.0.0",
-    "@flow/fcl": "1.9.0",
+    "typescript": "5.3.3",
+    "@imtbl/sdk": "2.10.5",
+    "@onflow/fcl": "1.20.4",
     "@onflow/types": "1.2.0",
     "@metaplex-foundation/js": "0.20.0",
     "@solana/web3.js": "1.90.0",
@@ -34,6 +29,8 @@
     "@react-three/drei": "9.96.0",
     "@react-three/rapier": "1.2.0",
     "leva": "0.9.35",
+    "ethers": "6.10.0",
+    "lucide-react": "0.553.0",
     "socket.io-client": "4.6.0",
     "mediasoup-client": "3.7.0",
     "simple-peer": "9.11.0",
@@ -47,7 +44,8 @@
     "@types/react": "18.3.0",
     "@types/react-dom": "18.3.0",
     "@types/three": "0.161.0",
+    "@types/simple-peer": "9.11.9",
     "eslint": "8.56.0",
-    "eslint-config-next": "14.3.0"
+    "eslint-config-next": "14.2.5"
   }
 }

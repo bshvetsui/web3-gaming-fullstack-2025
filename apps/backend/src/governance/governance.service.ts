@@ -837,7 +837,7 @@ export class GovernanceService {
     ];
   }
 
-  private async getVotingPower(address: string): Promise<string> {
+  private async getVotingPower(_address: string): Promise<string> {
     // In production, would fetch from token contract
     return '100000';
   }

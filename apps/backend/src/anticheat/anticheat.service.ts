@@ -697,9 +697,16 @@ export class AnticheatService {
     const session = this.sessions.get(playerId);
     if (session) {
       session.violations.push(violation);
-      session.trustScore = Math.max(0, session.trustScore - violation.severity === 'critical' ? 50 :
-                                                             violation.severity === 'high' ? 20 :
-                                                             violation.severity === 'medium' ? 10 : 5);
+      const penalty =
+        violation.severity === 'critical'
+          ? 50
+          : violation.severity === 'high'
+            ? 20
+            : violation.severity === 'medium'
+              ? 10
+              : 5;
+
+      session.trustScore = Math.max(0, session.trustScore - penalty);
     }
 
     this.eventEmitter.emit('anticheat.violation.detected', {

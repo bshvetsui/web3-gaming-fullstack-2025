@@ -363,7 +363,7 @@ export class ReplayService {
     metadata.duration = lastFrame ? lastFrame.timestamp : 0;
 
     // Analyze replay for additional insights
-    const analysis = await this.analyzeReplay(replayId, frames);
+    await this.analyzeReplay(replayId, frames);
 
     // Save to file
     const filePath = await this.saveReplay(replayId, frames, metadata);

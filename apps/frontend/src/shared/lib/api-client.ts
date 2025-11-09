@@ -2,7 +2,7 @@
  * API Client with automatic retry and caching
  */
 
-interface RequestConfig extends RequestInit {
+interface RequestConfig extends Omit<RequestInit, 'cache'> {
   timeout?: number;
   retries?: number;
   cache?: boolean;

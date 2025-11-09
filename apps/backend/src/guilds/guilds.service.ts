@@ -14,20 +14,20 @@ export interface Guild {
   treasury: number;
   createdAt: Date;
   perks: GuildPerk[];
-  stats: GuildStats;
-  requirements: GuildRequirements;
-  logo: string;
-  banner: string;
-  discord: string;
-  website: string;
-  isRecruiting: boolean;
-  language: string;
-  region: string;
-  type: 'casual' | 'competitive' | 'social' | 'hardcore';
-  wars: GuildWar[];
-  alliances: string[]; // guild IDs
-  achievements: GuildAchievement[];
-  buildings: GuildBuilding[];
+  stats?: GuildStats;
+  requirements?: GuildRequirements;
+  logo?: string;
+  banner?: string;
+  discord?: string;
+  website?: string;
+  isRecruiting?: boolean;
+  language?: string;
+  region?: string;
+  type?: 'casual' | 'competitive' | 'social' | 'hardcore';
+  wars?: GuildWar[];
+  alliances?: string[]; // guild IDs
+  achievements?: GuildAchievement[];
+  buildings?: GuildBuilding[];
 }
 
 export interface GuildPerk {
@@ -49,12 +49,12 @@ export interface GuildMember {
   role: 'leader' | 'officer' | 'elite' | 'member' | 'recruit';
   joinedAt: Date;
   contribution: number;
-  weeklyContribution: number;
-  lastActive: Date;
-  permissions: GuildPermission[];
-  guildExp: number;
-  donationRank: number;
-  warParticipations: number;
+  weeklyContribution?: number;
+  lastActive?: Date;
+  permissions?: GuildPermission[];
+  guildExp?: number;
+  donationRank?: number;
+  warParticipations?: number;
 }
 
 export interface GuildPermission {

@@ -1,5 +1,10 @@
-import * as fcl from '@flow/fcl';
+import * as fcl from '@onflow/fcl';
 import { WalletConnection } from '@/shared/types/wallet';
+
+type FlowArgsBuilder = (
+  arg: typeof fcl.arg,
+  t: typeof fcl.t
+) => ReturnType<typeof fcl.arg>[];
 
 /**
  * Flow blockchain adapter
@@ -62,20 +67,20 @@ export class FlowAdapter {
   /**
    * Execute a Flow script
    */
-  async executeScript(code: string, args?: any[]) {
+  async executeScript(code: string, args?: FlowArgsBuilder) {
     return await fcl.query({
       cadence: code,
-      args: args || [],
+      args: args || (() => []),
     });
   }
 
   /**
    * Send a Flow transaction
    */
-  async sendTransaction(code: string, args?: any[]) {
+  async sendTransaction(code: string, args?: FlowArgsBuilder) {
     const transactionId = await fcl.mutate({
       cadence: code,
-      args: args || [],
+      args: args || (() => []),
       limit: 999,
     });
 

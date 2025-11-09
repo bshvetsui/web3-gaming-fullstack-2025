@@ -14,14 +14,14 @@ export interface Tournament {
   status: 'upcoming' | 'registration' | 'active' | 'completed' | 'cancelled';
   participants: TournamentParticipant[];
   brackets: TournamentBracket[];
-  format: 'single-elimination' | 'double-elimination' | 'round-robin' | 'swiss';
-  gameMode: 'solo' | 'duo' | 'squad' | '5v5';
-  prizeDistribution: PrizeDistribution[];
-  rules: TournamentRules;
-  sponsors: Sponsor[];
+  format?: 'single-elimination' | 'double-elimination' | 'round-robin' | 'swiss';
+  gameMode?: 'solo' | 'duo' | 'squad' | '5v5';
+  prizeDistribution?: PrizeDistribution[];
+  rules?: TournamentRules;
+  sponsors?: Sponsor[];
   streamUrl?: string;
-  spectators: number;
-  region: string;
+  spectators?: number;
+  region?: string;
 }
 
 export interface TournamentParticipant {
@@ -31,20 +31,20 @@ export interface TournamentParticipant {
   seed: number;
   currentRound: number;
   isEliminated: boolean;
-  wins: number;
-  losses: number;
-  points: number;
+  wins?: number;
+  losses?: number;
+  points?: number;
   placement?: number;
-  checkedIn: boolean;
-  registeredAt: number;
+  checkedIn?: boolean;
+  registeredAt?: number;
 }
 
 export interface TournamentBracket {
   round: number;
   matches: Match[];
-  name: string;
-  startTime: number;
-  isComplete: boolean;
+  name?: string;
+  startTime?: number;
+  isComplete?: boolean;
 }
 
 export interface Match {

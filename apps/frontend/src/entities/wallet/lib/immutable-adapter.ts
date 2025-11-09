@@ -1,4 +1,4 @@
-import { config, passport } from '@immutable/sdk';
+import { config, passport } from '@imtbl/sdk';
 import { WalletConnection } from '@/shared/types/wallet';
 
 /**

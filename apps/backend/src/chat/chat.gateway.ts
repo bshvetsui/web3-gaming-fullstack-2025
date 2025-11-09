@@ -196,11 +196,11 @@ export class ChatGateway
     });
   }
 
-  afterInit(server: Server) {
+  afterInit() {
     this.logger.log('Chat Gateway initialized');
   }
 
-  handleConnection(client: Socket, ...args: any[]) {
+  handleConnection(client: Socket) {
     this.logger.log(`Client connected: ${client.id}`);
 
     // Send available channels to new client

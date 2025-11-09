@@ -188,7 +188,7 @@ export class StakingService {
     }
 
     // Check existing stakes
-    let userStakesList = this.userStakes.get(userId) || [];
+    const userStakesList = this.userStakes.get(userId) || [];
     const existingStake = userStakesList.find(s => s.poolId === poolId);
 
     if (existingStake) {

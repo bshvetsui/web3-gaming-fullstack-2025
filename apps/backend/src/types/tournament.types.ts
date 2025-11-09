@@ -11,14 +11,14 @@ export interface Tournament {
   status: TournamentStatus;
   participants: TournamentParticipant[];
   brackets: TournamentBracket[];
-  format: TournamentFormat;
-  gameMode: GameMode;
-  prizeDistribution: PrizeDistribution[];
-  rules: TournamentRules;
-  sponsors: Sponsor[];
+  format?: TournamentFormat;
+  gameMode?: GameMode;
+  prizeDistribution?: PrizeDistribution[];
+  rules?: TournamentRules;
+  sponsors?: Sponsor[];
   streamUrl?: string;
-  spectators: number;
-  region: string;
+  spectators?: number;
+  region?: string;
 }
 
 export enum TournamentStatus {
@@ -50,20 +50,20 @@ export interface TournamentParticipant {
   seed: number;
   currentRound: number;
   isEliminated: boolean;
-  wins: number;
-  losses: number;
-  points: number;
+  wins?: number;
+  losses?: number;
+  points?: number;
   placement?: number;
-  checkedIn: boolean;
-  registeredAt: number;
+  checkedIn?: boolean;
+  registeredAt?: number;
 }
 
 export interface TournamentBracket {
   round: number;
   matches: Match[];
-  name: string;
-  startTime: number;
-  isComplete: boolean;
+  name?: string;
+  startTime?: number;
+  isComplete?: boolean;
 }
 
 export interface Match {

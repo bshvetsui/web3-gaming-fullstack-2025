@@ -4,11 +4,9 @@ import {
   Post,
   Body,
   Param,
-  Query,
   UseGuards,
   Request,
-  Put,
-  Delete
+  Put
 } from '@nestjs/common';
 import { StakingService } from './staking.service';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';

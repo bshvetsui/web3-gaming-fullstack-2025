@@ -1,5 +1,5 @@
 import { Room, Client } from '@colyseus/core';
-import { GameState } from '../schemas/GameState';
+import { GameState, PlayerState } from '../schemas/GameState';
 
 export interface JoinOptions {
   username: string;
@@ -48,7 +48,7 @@ export class GameRoom extends Room<GameState> {
     }
 
     // Add player to game state
-    const player = this.state.addPlayer(
+    this.state.addPlayer(
       client.sessionId,
       options.username,
       options.walletAddress
@@ -66,7 +66,7 @@ export class GameRoom extends Room<GameState> {
     }
   }
 
-  onLeave(client: Client, consented: boolean) {
+  onLeave(client: Client, _consented: boolean) {
     console.log(`Player ${client.sessionId} left`);
 
     const player = this.state.players.get(client.sessionId);
@@ -197,9 +197,8 @@ export class GameRoom extends Room<GameState> {
 
     if (this.state.status === 'active') {
       // Check win conditions
-      const alivePlayers = Array.from(this.state.players.values()).filter(
-        (p) => p.isAlive
-      );
+      const players = Array.from(this.state.players.values()) as PlayerState[];
+      const alivePlayers = players.filter(player => player.isAlive);
 
       if (alivePlayers.length === 1) {
         // Last player standing wins

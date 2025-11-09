@@ -1,11 +1,11 @@
-// Barrel export for all backend types
-export * from './auction.types';
-export * from './profile.types';
-export * from './tournament.types';
-export * from './staking.types';
-export * from './guild.types';
-export * from './chat.types';
-export * from './matchmaking.types';
-export * from './anticheat.types';
-export * from './replay.types';
-export * from './governance.types';
+// Barrel export for backend types using namespaces to avoid re-export conflicts
+export * as AuctionTypes from './auction.types';
+export * as ProfileTypes from './profile.types';
+export * as TournamentTypes from './tournament.types';
+export * as StakingTypes from './staking.types';
+export * as GuildTypes from './guild.types';
+export * as ChatTypes from './chat.types';
+export * as MatchmakingTypes from './matchmaking.types';
+export * as AnticheatTypes from './anticheat.types';
+export * as ReplayTypes from './replay.types';
+export * as GovernanceTypes from './governance.types';

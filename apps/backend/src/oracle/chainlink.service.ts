@@ -112,7 +112,7 @@ export class ChainlinkService {
     const seeds = await this.requestMultipleRandomNumbers(playerCount);
 
     // Normalize seeds to 1-playerCount range
-    return seeds.map((seed, index) => {
+    return seeds.map(seed => {
       return (seed % playerCount) + 1;
     });
   }

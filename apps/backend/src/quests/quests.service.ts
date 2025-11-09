@@ -45,7 +45,6 @@ export class QuestsService {
   }
 
   private generateDailyQuests() {
-    const now = Date.now();
     const dayEnd = new Date();
     dayEnd.setHours(23, 59, 59, 999);
 

@@ -121,7 +121,7 @@ export class NFTService {
    */
   async purchaseNFT(
     listingId: string,
-    buyer: string
+    _buyer: string
   ): Promise<{ transactionHash: string }> {
     const listing = this.listings.get(listingId);
 
